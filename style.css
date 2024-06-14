@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d192b;
+  min-height: 100vh;
+  max-width: 1440px;
+  padding: 10px;
+}
+
+.Main-card{
+  border-radius: 1.00rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 350px;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #14253d;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+}
+
+.image-card {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 0.50rem; 
+}
+
+
+
+.nft-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.50rem;
+}
+
+.title {
+  font-size:  1.44rem;
+  color: #ffffff;
+  font-family: Outfit;
+  margin-bottom: 1.10rem;
+  margin-top: 0.93rem;
+}
+
+.info-description {
+    font-size:  1.00rem;
+    font-family: Outfit;
+    color: #8bacda;
+    margin-bottom: 1.10rem;
+}
+
+.nft-price-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.56rem;
+}
+
+.eth-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eth-value {
+  color: #00fff7;
+  font-family: Outfit;
+}
+
+.time-left {
+  font-family: Outfit;
+  color: #8bacda;
+}
+
+.eth-icon, .clock-icon {
+  margin-right: 0.31rem;
+}
+
+.Author-card{
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 0.50rem;
+}
+
+hr.solid {
+  height: 1px; 
+  border: none; 
+  background-color: #2f415b; 
+  width: 100%; 
+  margin-bottom: 0.31rem;
+}
+
+.creation-pfp {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid white;
+  border-radius: 1.19rem;
+}
+
+.author-name p {
+  margin-left: 0.88rem;
+  font-family: Outfit;
+  color: #8bacda;
+  font-weight: 400;
+}
+
+.author-name span {
+  color: 	#ffffff;
+}
+
+
+/* hover css */
+
+
+.image-card .nft-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.63rem; 
+  transition: filter 0.3s ease; 
+}
+
+.image-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 255, 247, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease; 
+}
+
+.image-card:hover .nft-img {
+  filter: brightness(70%) contrast(120%); 
+}
+
+.image-card:hover .overlay {
+  opacity: 1; 
+  cursor: pointer;
+}
+
+.icon {
+  display: none;
+}
+
+.image-card:hover .icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title:hover, .author-name span:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+
+/* media query */
+
+
+  @media only screen and (max-width: 375px) {
+    body {
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0d192b;
+    }
+  
+    .Main-card {
+      max-width: 90%;
+      padding: 1.56rem; 
+      transform: none; 
+      position: static; 
+      margin: auto; 
+    }
+  
+    .title {
+      font-size: 1.25rem;
+      margin-top: 1.05rem;
+      margin-bottom: 1rem;
+    }
+  
+    .info-description {
+      font-size: 0.9rem; 
+      margin-bottom: 1.05rem;
+    }
+  
+    .nft-price-card {
+      margin-bottom: 1rem;
+    }
+  
+    .eth-value {
+      font-size: 0.9rem;  
+    }
+  
+    .time-left {
+      font-size: 0.9rem;  
+    }
+  
+    .author-name p {
+      font-size: 0.9rem; 
+      margin-left: 0.5rem; 
+    }
+
+    
+  }
